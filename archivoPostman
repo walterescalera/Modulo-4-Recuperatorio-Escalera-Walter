@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "5598daf9-e326-4cac-988f-7a324dc24d0c",
+		"name": "proyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5671398"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "One User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/users/id"
+					},
+					"response": []
+				},
+				{
+					"name": "User Change",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"erika_030@gmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/users/id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ale@gmail.com\",\r\n    \"password\": \"1234\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"ale@gmail.com\",\r\n    \"password\": \"1234\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/signin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receta",
+			"item": [
+				{
+					"name": "Recetas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbGVAZ21haWwuY29tIiwiaWF0IjoxNzAwMjc1NTU1LCJleHAiOjE3MDAyNzU4NTV9.5CF74sFZzB6XD1w0sKRYnPtVifcFnR5C64mYGZLWF8A"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/recetas"
+					},
+					"response": []
+				},
+				{
+					"name": "Receta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbGVAZ21haWwuY29tIiwiaWF0IjoxNzAwMjc1MjQwLCJleHAiOjE3MDAyNzU1NDB9.IxYKLml1DttcKhTzqQDYdVVK4AcyNsd-RZJ0BVD_SbY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/receta/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Receta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbGVAZ21haWwuY29tIiwiaWF0IjoxNzAwMjc1MjQwLCJleHAiOjE3MDAyNzU1NDB9.IxYKLml1DttcKhTzqQDYdVVK4AcyNsd-RZJ0BVD_SbY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nombre\": \"picante\",\r\n    \"descripcion\": \"Classic Italian dish\",\r\n    \"imagen\": \"spaghetti.jpg\",\r\n    \"ingredientes\": \"500g spaghetti, 400g ground beef, 1 onion, 2 cloves garlic, 1 can tomatoes, salt, pepper\",\r\n    \"preparacion\": \"1. Cook spaghetti according to package instructions. 2. In a pan, brown ground beef.\",\r\n    \"preparacionDeTiempo\": 45\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/receta/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Receta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbGVAZ21haWwuY29tIiwiaWF0IjoxNzAwMjc1MjQwLCJleHAiOjE3MDAyNzU1NDB9.IxYKLml1DttcKhTzqQDYdVVK4AcyNsd-RZJ0BVD_SbY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nombre\": \"fideos\",\r\n    \"descripcion\": \"Classic Italian dish with a twist\",\r\n    \"imagen\": \"updated_spaghetti.jpg\",\r\n    \"ingredientes\": \"500g spaghetti, 400g ground beef, 1 onion, 2 cloves garlic, 1 can tomatoes, salt, pepper\",\r\n    \"preparacion\": \"1. Cook spaghetti according to package instructions. 2. In a pan, brown ground beef. \",\r\n    \"preparacionDeTiempo\": 30\r\n  \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/receta/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Receta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhbGVAZ21haWwuY29tIiwiaWF0IjoxNzAwMjc1NTU1LCJleHAiOjE3MDAyNzU4NTV9.5CF74sFZzB6XD1w0sKRYnPtVifcFnR5C64mYGZLWF8A"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/receta/id"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
